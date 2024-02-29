@@ -1,4 +1,4 @@
 public interface AajtakChannels {
     void update(String news);
-    String getType();
+    Main.Type getType();
 }

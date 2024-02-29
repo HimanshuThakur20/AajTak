@@ -1,20 +1,20 @@
 import java.lang.*;
 public class AajtakChannelsObserver implements AajtakChannels{
     private String newsFor;
-    private String channelType;
+    private Main.Type channelType;
 
-    public AajtakChannelsObserver(String newsFor, String channelType) {
+    public AajtakChannelsObserver(String newsFor, Main.Type channelType) {
         this.newsFor = newsFor;
-        this.channelType = channelType.toLowerCase();
+        this.channelType = channelType;
     }
 
     @Override
     public void update(String news) {
-        System.out.println(newsFor + " received message: " + news);
+        System.out.println("\n"+newsFor + " received message: \n" + news + "\n");
     }
 
     @Override
-    public String getType() {
+    public Main.Type getType() {
         return channelType;
     }
 }
